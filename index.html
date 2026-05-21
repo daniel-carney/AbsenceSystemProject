@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!-- 
+  ABSENCE NOTIFICATION SYSTEM - STUDENT LANDING PAGE
+  Official Branding: Penn State University Brand Palette
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absence Notification System | Student Portal</title>
+    <!-- Load Official Penn State Web Font: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* OFFICIAL PENN STATE BRAND PALETTE */
+        :root {
+            --nittany-navy: #001E44;   /* Primary Navy */
+            --beaver-blue: #1E407C;    /* Secondary Blue */
+            --puissant-blue: #005DAA;  /* Accent Blue */
+            --slate-gray: #31343A;     /* Accessible Text Gray */
+            --limestone: #E4E5E7;      /* Background Gray */
+            --white: #FFFFFF;          /* Pure White */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; 
+            line-height: 1.5;
+            color: var(--slate-gray); 
+            background-color: var(--white);
+        }
+
+        /* Hero Header Section */
+        header {
+            background-color: var(--nittany-navy);
+            color: var(--white);
+            padding: 80px 24px;
+            text-align: center;
+            position: relative; /* Required for the watermark positioning */
+            overflow: hidden; /* Ensures the watermark doesn't bleed out */
+        }
+
+        /* Watermark Background Logo */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('extension/icon.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 320px; /* Large background icon */
+            opacity: 0.10; /* Very low opacity for subtle watermark effect */
+            z-index: 0;
+        }
+
+        /* Ensure header text stays above the watermark */
+        header h1, header .tagline, header .sub-description {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem; 
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        header .tagline {
+            display: block;
+            margin-top: 24px;
+            font-size: 1.3rem;
+            color: var(--white);
+        }
+
+        header .tagline .bold-highlight {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header .sub-description {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 16px auto 0;
+            font-weight: 300;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1120px; 
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Call to Action Button */
+        .cta-container {
+            text-align: center;
+            margin: 48px 0;
+        }
+
+        .btn-download {
+            background-color: var(--puissant-blue);
+            color: var(--white);
+            padding: 16px 48px; 
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: background-color 0.2s, transform 0.1s;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            background-color: #004a87;
+            transform: translateY(-1px);
+        }
+
+        /* Instruction Steps Section */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px; 
+            margin-top: 64px;
+        }
+
+        .step-card {
+            background: var(--limestone);
+            padding: 32px;
+            border-radius: 4px;
+            text-align: center;
+            border-bottom: 4px solid var(--beaver-blue);
+        }
+
+        .step-number {
+            background: var(--nittany-navy);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .step-card h3 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: var(--nittany-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Syllabus Disclaimer */
+        .disclaimer {
+            margin-top: 64px;
+            padding: 24px;
+            background-color: #FFFBE6;
+            border: 1px solid #FFE58F;
+            border-left: 6px solid var(--puissant-blue);
+            font-size: 0.95rem;
+            color: var(--slate-gray);
+            border-radius: 4px;
+        }
+
+        /* Redesigned Streamlined Benefits Section */
+        .student-benefits {
+            margin-top: 72px;
+            padding: 64px 40px;
+            background-color: var(--beaver-blue);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .student-benefits h2 {
+            color: var(--white);
+            margin-bottom: 48px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background-color: var(--white);
+            padding: 48px 32px;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .benefit-card h4 {
+            color: var(--beaver-blue);
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .benefit-card p {
+            color: var(--beaver-blue);
+            line-height: 1.6;
+            font-size: 1.05rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 64px;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--limestone);
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Absence Notification System</h1>
+        <span class="tagline">Effective communication, <span class="bold-highlight">WITHOUT THE 'FLUFF' !</span></span>
+        <p class="sub-description">A modern, easy way to notify your professors of an absence.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="cta-container">
+            <a href="#" class="btn-download">CLICK TO ADD EXTENSION TO CHROME</a>
+            <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">Compatible with Google Chrome and Microsoft Edge</p>
+        </div>
+
+        <div class="steps">
+            <div class="step-card">
+                <span class="step-number">1</span>
+                <h3>Install Extension</h3>
+                <p>Add the tool to your browser once. It stays pinned to your toolbar for all current and future courses.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">2</span>
+                <h3>Enter Course Key</h3>
+                <p>Type in the unique key found in your course syllabus. The system remembers this for you.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">3</span>
+                <h3>Submit Notice</h3>
+                <p>Complete all required fields in the popup form and click submit to record your absence.</p>
+            </div>
+            <div class="step-card">
+                <span class="step-number">4</span>
+                <h3>Confirm Receipt</h3>
+                <p>Check your university email immediately for an automated receipt confirming your submission.</p>
+            </div>
+        </div>
+
+        <section class="student-benefits">
+            <h2>Streamlined for Students</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <h4>Stop Writing Emails</h4>
+                    <p>No more stressing over how to phrase a formal email. Just fill out the form and you're done in seconds.</p>
+                </div>
+                <div class="benefit-card">
+                    <h4>Instant Peace of Mind</h4>
+                    <p>The automated receipt serves as your digital "paper trail," proving exactly when you notified your professor.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="disclaimer">
+            <p><strong>IMPORTANT NOTE:</strong> This system is for absence notification only. Always refer to your <strong>official course syllabus</strong> for specific policies regarding late work, makeup assignments, and attendance requirements. Responsibility for academic policy compliance remains with the student.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        Absence Notification System | Supporting Academic Integrity and Professionalism
+    </footer>
+
+</body>
+</html>

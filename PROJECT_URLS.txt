@@ -1,0 +1,22 @@
+# Absence System - Important URLs
+
+================================================================================
+1. PROFESSOR'S PRIVATE API (The 'Destination')
+================================================================================
+URL: https://script.google.com/macros/s/[REDACTED_FOR_SECURITY]/exec
+
+================================================================================
+2. MASTER GATEWAY URL (The 'Switchboard')
+================================================================================
+URL: https://script.google.com/macros/s/[REDACTED_FOR_SECURITY]/exec
+
+================================================================================
+3. SPREADSHEETS
+================================================================================
+Master Directory (Admin): [REDACTED_LINK]
+Professor Test Sheet: [REDACTED_LINK]
+
+================================================================================
+4. SYLLABUS LANDING PAGE
+================================================================================
+URL: [PASTE YOUR GITHUB PAGES URL HERE ONCE CREATED]

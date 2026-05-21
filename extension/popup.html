@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- 
+  ABSENCE NOTIFICATION SYSTEM - STUDENT INTERFACE
+  This file defines the layout and styling of the extension popup.
+  Designed for Penn State Aesthetic (Navy/White).
+-->
+<html>
+<head>
+  <meta charset="UTF-8"> <!-- Ensures emojis and special characters render correctly -->
+  <style>
+    /* Main Popup Container */
+    body { 
+      width: 300px; 
+      padding: 15px; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      color: #333;
+    }
+    
+    /* Branding Header */
+    h2 { 
+      font-size: 18px; 
+      margin-bottom: 15px; 
+      color: #001E44; /* Penn State Navy */
+      border-bottom: 2px solid #001E44;
+      padding-bottom: 5px;
+    }
+    
+    /* Input Labels */
+    label { 
+      font-size: 12px; 
+      font-weight: bold;
+      color: #666; 
+      display: block; 
+      margin-top: 10px; 
+    }
+    
+    /* Form Input Styles */
+    input, select { 
+      width: 100%; 
+      padding: 8px; 
+      margin-top: 5px; 
+      box-sizing: border-box; 
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    /* Interaction Styles (Focus) */
+    input:focus, select:focus {
+      outline: none;
+      border-color: #001E44;
+      box-shadow: 0 0 3px rgba(0,30,68,0.3);
+    }
+    
+    /* Primary Action Button */
+    button { 
+      width: 100%; 
+      margin-top: 20px; 
+      padding: 10px; 
+      background-color: #001E44; /* Penn State Navy */
+      color: white; 
+      font-weight: bold;
+      border: none; 
+      cursor: pointer; 
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover { 
+      background-color: #003087; /* Slightly lighter navy */
+    }
+    
+    /* Status Messaging Area */
+    #status { 
+      font-size: 12px; 
+      margin-top: 15px; 
+      text-align: center; 
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Absence Notification</h2>
+  
+  <!-- Step 1: Identify the Course -->
+  <label>Course Key</label>
+  <input type="text" id="courseKey" placeholder="e.g. SMITH-BIO101-4821">
+
+  <!-- Step 2: Identify the Student -->
+  <label>Full Name</label>
+  <input type="text" id="name" placeholder="First Last">
+
+  <label>University Email</label>
+  <input type="email" id="email" placeholder="email@psu.edu">
+
+  <!-- Step 3: Absence Details -->
+  <label>Absence Date</label>
+  <input type="date" id="date">
+
+  <label>Reason</label>
+  <select id="reason">
+    <option value="Illness">Illness</option>
+    <option value="Family Matter">Family Matter</option>
+    <option value="Travel/Personal">Travel / Personal</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <!-- Submit Trigger -->
+  <button id="submitBtn">Submit Notification</button>
+  
+  <!-- Dynamic Success/Error messages appear here -->
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
