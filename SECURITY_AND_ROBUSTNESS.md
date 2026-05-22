@@ -52,7 +52,7 @@ This document outlines the architectural safeguards, security protocols, and acc
 ### 8. Authorization Gating (Access Code Protection)
 **The Threat:** Unauthorized users or bots triggering the automated creation of course databases.
 **The Defense:** **Two-Factor Authorization**.
-- The Professor Portal requires a specific **System Access Code** (`STAFF-ACCESS-2024`) to reveal the registration form.
+- The Professor Portal requires a specific **System Access Code** (`[REDACTED_FOR_PORTFOLIO]`) to reveal the registration form.
 - The Master Gateway performs a secondary server-side check; it will reject any `register_prof` request that does not include this secret passcode.
 
 ### 9. Permission Rationale & Transparency
@@ -78,6 +78,13 @@ This document outlines the architectural safeguards, security protocols, and acc
 - **Sensitive Data Decoupling:** No student absence data is stored on GitHub. Data remains strictly within the encrypted Google Enterprise environment, ensuring that a breach of the code repository does not result in a breach of student privacy.
 - **Private Repository Masking:** Utilizing private repositories for hosting ensures that the underlying source code remains hidden from the general public while the front-facing portals remain functional for students and staff.
 
+### 12. Analytical Integrity (Visual Accuracy)
+**The Threat:** Misleading or manipulated visual data leading to incorrect faculty decisions.
+**The Defense:** **Automated Server-Side Aggregation**.
+- **Query Gating:** The "Analytics Dashboard" does not rely on manual data entry or client-side calculations. It uses secure, server-side Query Language (GQL) to pull directly from the raw, timestamped log.
+- **Immutable Logic:** Formulas are "pre-loaded" into the Golden Template, ensuring that every professor uses the exact same validated logic for calculating crisis dates and attendance trends.
+- **Source-Truth Synchronization:** Charts update automatically as data arrives in the master log, eliminating the risk of human error or "stale" data visualization.
+
 ---
 **Conclusion:** 
-The Absence Notification System is designed with a "Security-First" and "Inclusive-Always" mindset. By combining server-side logic, data isolation, administrative gating, secure cloud infrastructure, and total accessibility, the system provides a professional, tamper-proof environment for the entire academic community.
+The Absence Notification System is designed with a "Security-First" and "Inclusive-Always" mindset. By combining server-side logic, data isolation, administrative gating, secure cloud infrastructure, and total accessibility, the system provides a professional, tamper-proof, and data-driven environment for the entire academic community.

@@ -32,6 +32,10 @@ The "Golden Blueprint" cloned for every new course.
   - **Absence System Menu:** Allows one-click "Finalize & Activate" setup.
   - **Weekly Digest:** Automatic Friday summary emails with tabular data formatting.
   - **SYSTEM_CONFIG:** Hidden configuration layer that stores course-specific metadata.
+  - **Analytics Dashboard:** An automated visual reporting tab featuring:
+    - **Detection:** Bar charts identifying the "Top 5" most missed dates.
+    - **Trends:** Chronological line charts visualizing attendance patterns over the semester.
+    - **Dynamic Queries:** Uses Google Query Language (GQL) for real-time data aggregation.
 
 ---
 
@@ -75,7 +79,7 @@ To demonstrate engineering proficiency to prospective employers while maintainin
   - Full-stack architecture using Google Apps Script (Backend) and Chrome Extensions (Frontend).
   - Institutional high-fidelity UI/UX design (WCAG 2.1 compliant).
   - Automated SaaS provisioning engine ("The Factory").
-  - Comprehensive documentation including a formal Security & Robustness Manifesto.
+  - Comprehensive documentation including a formal Security & Robustness Manifesto and Privacy Policy.
 
 ---
 
@@ -86,4 +90,3 @@ To demonstrate engineering proficiency to prospective employers while maintainin
 - [ ] Create "Sanitized" branch/repo for Public Portfolio.
 - [ ] Create Privacy Policy document.
 - [ ] Submit to Chrome Web Store.
-
