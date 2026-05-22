@@ -1,6 +1,6 @@
 # Privacy Policy: Absence Notification System
 
-**Effective Date:** May 22, 2024
+**Effective Date:** May 22, 2026
 
 The Absence Notification System is built with a "Privacy-First" architecture, specifically designed for university environments. This policy outlines how data is handled within the system.
 
