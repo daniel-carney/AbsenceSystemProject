@@ -1,4 +1,4 @@
-# Absence Notification System: Enterprise Relay Edition
+# Absence Notification System
 
 ![Header Logo](extension/icon.png)
 
