@@ -11,7 +11,7 @@ A scalable, multi-tenant academic communication system designed to replace unstr
 
 ### 1. Student Portal
 ![Student Portal Screenshot](screenshots/student_portal.png)
-*A modern, engaging landing page featuring institutional branding and clear 1-2-3 installation instructions.*
+*A modern, engaging landing page featuring clear 1-2-3 installation instructions.*
 
 ### 2. Chrome Extension UI
 ![Extension Screenshot](screenshots/extension_popup.png)
