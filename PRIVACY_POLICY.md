@@ -11,7 +11,7 @@ We believe in data minimization. The system only collects information necessary 
 - **Absence Details:** Date and reason for absence.
 - **Course Key:** To route the data to the correct professor.
 
-**Note:** We explicitly do NOT collect sensitive identifiers such as University ID numbers or Social Security numbers.
+**Note:** We explicitly do NOT collect sensitive identifiers such as University ID numbers.
 
 ### 2. Data Storage & Ownership
 - **Multi-Tenant Isolation:** All absence data is stored directly within the **Professor's private Google Spreadsheet**.
@@ -29,5 +29,4 @@ We do not sell, trade, or share any data with third parties. All communication o
 ### 5. Transparency
 The source code for this system is open and verifiable. Professors own their individual instances of the logic, allowing for full institutional audit and control.
 
----
-*For questions regarding this policy, please contact the developer via the official project repository.*
+
