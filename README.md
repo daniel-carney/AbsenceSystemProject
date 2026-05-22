@@ -15,6 +15,7 @@ A scalable, multi-tenant academic communication system designed to replace unstr
 
 ### 2. Chrome Extension UI
 ![Extension Screenshot](screenshots/extension_popup.png)
+
 *A sleek, write-only interface featuring persistent storage and deep-linking support for syllabus integration.*
 
 ### 3. Professor Administration Portal
